@@ -12,6 +12,20 @@ body {
     line-height: 1.4em;
 }
 
+h1 {
+    font-weight: bold;
+}
+
+.headline h3 {
+    color: #000000;
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 100%;
+
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -80,9 +94,9 @@ nav li {
 }
 
 .store,
-.business-info {
+.business-detail {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 3em 0 0 0;
 }
 
@@ -103,9 +117,110 @@ nav li {
     max-width: 8em;
 }
 
-footer .container{
-    height: 5rem;
-    color: white;
+.description {
+    display: flex;
+    flex-wrap: wrap;
     background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
 }
 
+.info {
+    width: 35%;
+}
+
+.info .title {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 5em 0;
+    margin-top: 4em;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile.container {
+        display: block;
+        text-align: center;
+    }
+
+    .product {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-image img {
+        max-width: 60%;
+    }
+
+    .description {
+        display:flex;
+        flex-wrap: wrap;
+        width: 14.8rem;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+    .store,
+    .business-detail {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        width: 60%;
+        margin: 0.5em auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-image img {
+        width: 30%;
+    }
+
+    .info {
+        width: 90%;
+        margin: 0.5em auto;
+    }
+
+    .main-banner {
+        height: 15em;
+    }
+
+    .headline {
+        width: 86%;
+        top: 10em;
+        padding: 1em 2em;
+        text-align: center;
+    }
+
+    .headline h3 {
+        font-size: .77rem;
+    }
+
+    .headline h1 {
+        font-size: 1rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
